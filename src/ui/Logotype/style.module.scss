@@ -1,0 +1,17 @@
+.logotype {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  p {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--white-color);
+  }
+  .red {
+    color: var(--red-color);
+  }
+  img {
+
+  }
+}
