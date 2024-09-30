@@ -1,0 +1,20 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px 16px;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      p {
+        color: var(--white-color);
+      }
+    }
+  }
+}
