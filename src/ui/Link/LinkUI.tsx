@@ -1,5 +1,5 @@
 import * as React from "react";
-import {NavLink, Link, useMatch, useParams, useLocation} from "react-router-dom";
+import {NavLink, Link,useLocation} from "react-router-dom";
 import {ReactElement} from "react";
 import style from "./style.module.scss"
 export interface ILink {
