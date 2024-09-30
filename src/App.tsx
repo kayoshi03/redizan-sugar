@@ -1,22 +1,29 @@
-import * as React from "react";
 import {Routes, Route, Navigate} from "react-router-dom";
-import {Layout} from "./pages/app/layout/Layout.tsx";
-import {HomePage} from "./pages/app/home/HomePage.tsx";
+import {HomePage} from "@/pages/app/home/HomePage.tsx";
+import {Layout} from "@/pages/app/layout/Layout.tsx";
 
-const App:React.FC = () => {
+
+
+const App = () => {
   return (
       <Routes>
-          <Route path="/*" element={<Navigate to="app/home" />}/>
         <Route
             path="/app"
             element={<Layout/>}
         >
             <Route
-                index
                 path={"home"}
                 element={<HomePage/>}
             />
+            <Route
+                path={"test"}
+                element={<HomePage/>}
+            />
         </Route>
+          <Route
+              path="/*"
+              element={<Navigate to="app/home" />}
+          />
       </Routes>
   )
 }

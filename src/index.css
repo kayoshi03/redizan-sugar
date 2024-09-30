@@ -2,8 +2,10 @@
 
 :root {
     --red-color: #8F111C;
+    --red-hover-color: rgba(143, 17, 28, 0.5);
     --white-color: #F4FAF6;
     --black-color: #1F2122;
+    --width-container: 1440px;
 }
 
 /* Reset and base styles  */
@@ -98,4 +100,18 @@ label {
 
 legend {
     display: block;
+}
+
+/**/
+
+.container {
+    max-width: var(--width-container);
+    width: 100%;
+}
+
+svg {
+    path {
+        width: 20px;
+        height: 20px;
+    }
 }
