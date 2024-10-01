@@ -3,7 +3,6 @@ import LinkUI, {ILink} from "@/ui/Link/LinkUI.tsx";
 import Logotype from "@/ui/Logotype/Logotype.tsx";
 import style from "./style.module.scss"
 
-
 const Header:React.FC = () => {
     return (
         <header className={style.header}>

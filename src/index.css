@@ -113,5 +113,14 @@ svg {
     path {
         width: 20px;
         height: 20px;
+        fill: var(--white-color);
     }
+}
+
+button, .btn {
+    background-color: var(--red-color);
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: var(--white-color);
 }

@@ -11,7 +11,7 @@ export interface ILink {
 
 const  LinkUI:React.FC<ILink> = ({title, nav, path, icon}) => {
     const match = useLocation()
-    const active = ({ isActive }) => {
+    const active = ({ isActive }:any) => {
         if(isActive && match.pathname + match.hash === path) {
             return style.link + ' ' + style.active
         }

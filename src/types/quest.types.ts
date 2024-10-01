@@ -1,10 +1,11 @@
 export interface QuestTypes{
     id: number
+    my_erp_id: number
     name: string
     slug: string
     description: string
     legend: string
-    files: string
+    files: object
     price: number
     min_players: number
     max_players: number
