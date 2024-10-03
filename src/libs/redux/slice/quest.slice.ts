@@ -1,6 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {QuestTypes} from "@/types/quest.types.ts";
-import {RootState} from "@/libs/redux/store.ts";
 import {questServices} from "@/api/services/quest.services.ts";
 
 export const getQuests = createAsyncThunk(
@@ -42,8 +41,5 @@ export const QuestSlice = createSlice({
             });
     }
 })
-
-
-export const Quests = (state:RootState) => state.quests.data
 
 export default QuestSlice.reducer

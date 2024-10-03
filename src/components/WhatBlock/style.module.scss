@@ -1,0 +1,36 @@
+.what {
+  padding: 64px 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("@/assets/test.png");
+  background-size: cover;
+  .card {
+    width: 1250px;
+    display: flex;
+    gap: 32px;
+    padding: 32px;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      h2,p {
+        color: var(--white-color);
+      }
+      h2 {
+        font-size: 36px;
+        font-weight: 900;
+      }
+      p {
+        font-weight: 400;
+        font-size: 20px;
+      }
+    }
+    img {
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+  }
+}

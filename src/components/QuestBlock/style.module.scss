@@ -1,0 +1,19 @@
+.quest {
+  display: flex;
+  justify-content: center;
+  padding: 64px 0;
+  background-image: linear-gradient(180deg, var(--black-color) 5%, transparent, var(--black-color) 95%), url("@/assets/backgroundQuest.png");
+  background-size: cover;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      row-gap: 32px;
+      justify-content: space-between;
+    }
+  }
+}
