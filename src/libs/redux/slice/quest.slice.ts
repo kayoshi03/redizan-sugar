@@ -5,8 +5,7 @@ import {questServices} from "@/api/services/quest.services.ts";
 export const getQuests = createAsyncThunk(
     "get_quests",
     async () => {
-        const res = questServices.getQuests()
-        return res
+        return questServices.getQuests()
     }
 )
 

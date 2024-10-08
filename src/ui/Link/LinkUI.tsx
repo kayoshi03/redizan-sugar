@@ -1,15 +1,17 @@
 import * as React from "react";
-import {NavLink, Link,useLocation} from "react-router-dom";
+import { Link,useLocation} from "react-router-dom";
+import { NavHashLink as NavLink} from "react-router-hash-link";
 import {ReactElement} from "react";
 import style from "./style.module.scss"
 export interface ILink {
     title: string
     path: string
     icon?: ReactElement<SVGElement>
-    nav: "link" | "nav"
+    nav: "link" | "nav",
+    target?: "_blank"
 }
 
-const  LinkUI:React.FC<ILink> = ({title, nav, path, icon}) => {
+const  LinkUI:React.FC<ILink> = ({title, nav, path, icon, target}) => {
     const match = useLocation()
     const active = ({ isActive }:any) => {
         if(isActive && match.pathname + match.hash === path) {
@@ -21,7 +23,7 @@ const  LinkUI:React.FC<ILink> = ({title, nav, path, icon}) => {
     }
     return (
         nav ? nav === "link" ?
-        <Link className={style.link} to={path}>
+        <Link className={style.link} to={path} target={target}>
             {icon}
             <p>{title}</p>
         </Link>

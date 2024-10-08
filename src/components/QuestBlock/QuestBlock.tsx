@@ -5,7 +5,7 @@ import Quest from "@/ui/Quest/Quest.tsx";
 const QuestBlock = () => {
     const quests = useAppSelector(state => state.quests.data)
     return (
-        <div className={style.quest}>
+        <div id="quests"  className={style.quest}>
             <div className="container">
                 <div className={style.wrapper}>
                     <h2 className="title">
@@ -25,7 +25,8 @@ const QuestBlock = () => {
                                        min_players={item.min_players}
                                        max_players={item.max_players}
                                        play_time={item.play_time}
-                                       age_limit={item.age_limit}/>
+                                       age_limit={item.age_limit}
+                                       slug={item.slug}/>
                             ))
                         }
 

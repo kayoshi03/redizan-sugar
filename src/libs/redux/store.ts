@@ -1,9 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
 import questSlice from "@/libs/redux/slice/quest.slice.ts";
+import photomainSlice from "@/libs/redux/slice/photomain.slice.ts";
 
 export const store = configureStore({
     reducer: {
-        quests: questSlice
+        quests: questSlice,
+        photoMain: photomainSlice
     },
 })
 

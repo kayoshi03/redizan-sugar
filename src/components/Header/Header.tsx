@@ -1,27 +1,35 @@
-import {RouteApp} from "@/strings/routes/strings.tsx";
-import LinkUI, {ILink} from "@/ui/Link/LinkUI.tsx";
 import Logotype from "@/ui/Logotype/Logotype.tsx";
+import NavBar from "@/ui/NavBar/NavBar.tsx";
 import style from "./style.module.scss"
+import React, {useEffect, useState} from "react";
 
 const Header:React.FC = () => {
+    const [scroll, setScroll] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            if (offset > 50) {
+                setScroll(true);
+            } else {
+                setScroll(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
     return (
-        <header className={style.header}>
+        <header className={`${style.header} ${scroll ? style.scroll : ""}`}>
             <div className="container">
                 <div className={style.wrapper}>
                     <Logotype/>
-                    <nav>
-                        {
-                            RouteApp.map((item:ILink) => (
-                                <LinkUI
-                                    key={item.title}
-                                    title={item.title}
-                                    path={item.path}
-                                    nav={item.nav}
-                                    icon={item?.icon}
-                                />
-                            ))
-                        }
-                    </nav>
+                    <NavBar/>
                 </div>
             </div>
         </header>

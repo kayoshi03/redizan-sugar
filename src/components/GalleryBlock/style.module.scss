@@ -1,0 +1,16 @@
+.gallery {
+  padding: 64px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+  }
+}

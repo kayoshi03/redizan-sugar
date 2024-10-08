@@ -2,9 +2,9 @@ import style from "./style.module.scss"
 import {QuestTypes} from "@/types/quest.types.ts";
 import {getImage} from "@/const/image.ts";
 
-type QuestProps = Pick<QuestTypes, "files" | "name" | "description" | "play_time" | "max_players" | "min_players" | "age_limit">
-const Quest = ({files,name, description, play_time, max_players, min_players, age_limit}:QuestProps) => {
-
+type QuestProps = Pick<QuestTypes, "files" | "name" | "description" | "play_time" | "max_players" | "min_players" | "age_limit" | "slug">
+const Quest = ({files,name, description, play_time, max_players, min_players, age_limit, slug}:QuestProps) => {
+    console.log(slug)
     return(
         <div className={style.quest}>
             <img width={400} height={240} src={getImage(files)} alt={""}/>

@@ -1,0 +1,44 @@
+.reviews {
+  display: flex;
+  justify-content: center;
+  padding: 128px 0;
+  background-image: linear-gradient(180deg, var(--black-color) 5%, transparent, var(--black-color) 95%), url("@/assets/backgroundReviews.png");
+  background-size: cover;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    .phone {
+      background: url("@/assets/iphone.png");
+      width: 1180px;
+      height: 586px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 32px;
+      padding: 64px calc(149px + 16px) 64px calc(142px + 16px);
+      .logotype {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        p {
+          font-size: 32px;
+          font-weight: 700;
+          color: var(--white-color);
+        }
+        .red {
+          color: var(--red-color);
+        }
+        img {
+
+        }
+      }
+      .list {
+        width: 100%;
+      }
+    }
+  }
+}

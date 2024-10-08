@@ -2,10 +2,11 @@ import style from './style.module.scss'
 import girl from "@/assets/girl.png"
 import left from "@/assets/left.png"
 import right from "@/assets/right.png"
-import {Link} from "react-router-dom";
+import {HashLink as Link} from "react-router-hash-link";
+
 const MainBlock = () => {
     return(
-        <div className={style.main}>
+        <div id="main" className={style.main}>
             <div className={style.text}>
                 <div className={style.bold}>
                     <h2>СТРАШНЫЕ</h2>
